@@ -1,0 +1,767 @@
+[2025-08-11T09:12:51,209][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] version[9.1.1], pid[21848], build[zip/5e94055934defa56e454868b7783b2a3b683785e/2025-08-05T01:07:31.959947279Z], OS[Windows 11/10.0/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/24/24+36-3646]
+[2025-08-11T09:12:51,245][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] JVM home [C:\elasticsearch-9.1.1\jdk], using bundled JDK [true]
+[2025-08-11T09:12:51,246][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] JVM arguments [-Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, --add-opens=org.apache.lucene.core/org.apache.lucene.codecs.lucene99=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene90=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene91=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene92=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene94=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene95=org.elasticsearch.server, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=CLDR, -Dorg.apache.lucene.vectorization.upperJavaFeatureVersion=24, -Des.path.home=C:\elasticsearch-9.1.1, -Des.distribution.type=zip, -Des.java.type=bundled JDK, --enable-native-access=org.elasticsearch.nativeaccess,org.apache.lucene.core, --enable-native-access=ALL-UNNAMED, --illegal-native-access=deny, -XX:ReplayDataFile=logs/replay_pid%p.log, -Des.entitlements.enabled=true, -XX:+EnableDynamicAgentLoading, -Djdk.attach.allowAttachSelf=true, --patch-module=java.base=C:\elasticsearch-9.1.1\lib\entitlement-bridge\elasticsearch-entitlement-bridge-9.1.1.jar, --add-exports=java.base/org.elasticsearch.entitlement.bridge=org.elasticsearch.entitlement,java.logging,java.net.http,java.naming,jdk.net, -XX:+UseG1GC, -Djava.io.tmpdir=C:\Users\rahul\AppData\Local\Temp\elasticsearch, --add-modules=jdk.incubator.vector, -Dorg.apache.lucene.store.defaultReadAdvice=normal, -XX:+HeapDumpOnOutOfMemoryError, -XX:+ExitOnOutOfMemoryError, -XX:ErrorFile=hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=gc.log:utctime,level,pid,tags:filecount=32,filesize=64m, -Xms3770m, -Xmx3770m, -XX:MaxDirectMemorySize=1976565760, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, --module-path=C:\elasticsearch-9.1.1\lib, --add-modules=jdk.net, --add-modules=jdk.management.agent, --add-modules=ALL-MODULE-PATH, -Djdk.module.main=org.elasticsearch.server]
+[2025-08-11T09:12:51,248][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] Default Locale [en_US]
+[2025-08-11T09:12:51,553][INFO ][o.e.n.NativeAccess       ] [DESKTOP-I62NE16] Using [jdk] native provider and native methods for [Windows]
+[2025-08-11T09:12:52,491][INFO ][o.a.l.i.v.PanamaVectorizationProvider] [DESKTOP-I62NE16] Java vector incubator API enabled; uses preferredBitSize=256; FMA enabled
+[2025-08-11T09:12:52,730][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] Bootstrapping Entitlements
+[2025-08-11T09:12:59,496][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-url]
+[2025-08-11T09:12:59,497][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rest-root]
+[2025-08-11T09:12:59,498][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-core]
+[2025-08-11T09:12:59,498][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-redact]
+[2025-08-11T09:12:59,498][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-user-agent]
+[2025-08-11T09:12:59,499][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-async-search]
+[2025-08-11T09:12:59,499][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-monitoring]
+[2025-08-11T09:12:59,500][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-s3]
+[2025-08-11T09:12:59,500][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-analytics]
+[2025-08-11T09:12:59,500][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-esql-core]
+[2025-08-11T09:12:59,501][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [search-business-rules]
+[2025-08-11T09:12:59,501][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ent-search]
+[2025-08-11T09:12:59,501][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-autoscaling]
+[2025-08-11T09:12:59,502][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [lang-painless]
+[2025-08-11T09:12:59,502][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ml]
+[2025-08-11T09:12:59,503][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [lang-mustache]
+[2025-08-11T09:12:59,504][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [legacy-geo]
+[2025-08-11T09:12:59,504][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [logsdb]
+[2025-08-11T09:12:59,505][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ql]
+[2025-08-11T09:12:59,505][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rank-rrf]
+[2025-08-11T09:12:59,506][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [analysis-common]
+[2025-08-11T09:12:59,506][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [health-shards-availability]
+[2025-08-11T09:12:59,506][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [transport-netty4]
+[2025-08-11T09:12:59,507][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [aggregations]
+[2025-08-11T09:12:59,507][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-common]
+[2025-08-11T09:12:59,508][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [frozen-indices]
+[2025-08-11T09:12:59,508][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-identity-provider]
+[2025-08-11T09:12:59,509][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-shutdown]
+[2025-08-11T09:12:59,509][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-text-structure]
+[2025-08-11T09:12:59,510][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [snapshot-repo-test-kit]
+[2025-08-11T09:12:59,510][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ml-package-loader]
+[2025-08-11T09:12:59,510][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [kibana]
+[2025-08-11T09:12:59,511][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [constant-keyword]
+[2025-08-11T09:12:59,511][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-logstash]
+[2025-08-11T09:12:59,512][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ccr]
+[2025-08-11T09:12:59,512][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-graph]
+[2025-08-11T09:12:59,513][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rank-vectors]
+[2025-08-11T09:12:59,513][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-esql]
+[2025-08-11T09:12:59,514][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [parent-join]
+[2025-08-11T09:12:59,514][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [counted-keyword]
+[2025-08-11T09:12:59,514][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-enrich]
+[2025-08-11T09:12:59,515][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repositories-metering-api]
+[2025-08-11T09:12:59,515][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [transform]
+[2025-08-11T09:12:59,516][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-azure]
+[2025-08-11T09:12:59,516][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [dot-prefix-validation]
+[2025-08-11T09:12:59,517][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-gcs]
+[2025-08-11T09:12:59,517][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [spatial]
+[2025-08-11T09:12:59,517][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-otel-data]
+[2025-08-11T09:12:59,518][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [apm]
+[2025-08-11T09:12:59,518][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [mapper-extras]
+[2025-08-11T09:12:59,518][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [mapper-version]
+[2025-08-11T09:12:59,519][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-rollup]
+[2025-08-11T09:12:59,520][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [percolator]
+[2025-08-11T09:12:59,520][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-migrate]
+[2025-08-11T09:12:59,521][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [data-streams]
+[2025-08-11T09:12:59,521][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-stack]
+[2025-08-11T09:12:59,522][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rank-eval]
+[2025-08-11T09:12:59,523][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [reindex]
+[2025-08-11T09:12:59,523][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [streams]
+[2025-08-11T09:12:59,524][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-security]
+[2025-08-11T09:12:59,524][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [blob-cache]
+[2025-08-11T09:12:59,525][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [searchable-snapshots]
+[2025-08-11T09:12:59,525][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-slm]
+[2025-08-11T09:12:59,526][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-geoip-enterprise-downloader]
+[2025-08-11T09:12:59,526][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [snapshot-based-recoveries]
+[2025-08-11T09:12:59,527][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-watcher]
+[2025-08-11T09:12:59,527][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [old-lucene-versions]
+[2025-08-11T09:12:59,528][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ilm]
+[2025-08-11T09:12:59,528][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-inference]
+[2025-08-11T09:12:59,528][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-voting-only-node]
+[2025-08-11T09:12:59,529][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-deprecation]
+[2025-08-11T09:12:59,529][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-fleet]
+[2025-08-11T09:12:59,530][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-aggregate-metric]
+[2025-08-11T09:12:59,530][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-downsample]
+[2025-08-11T09:12:59,530][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-profiling]
+[2025-08-11T09:12:59,531][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-geoip]
+[2025-08-11T09:12:59,531][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-write-load-forecaster]
+[2025-08-11T09:12:59,531][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-attachment]
+[2025-08-11T09:12:59,532][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [wildcard]
+[2025-08-11T09:12:59,532][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-apm-data]
+[2025-08-11T09:12:59,533][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [unsigned-long]
+[2025-08-11T09:12:59,533][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-sql]
+[2025-08-11T09:12:59,534][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [runtime-fields-common]
+[2025-08-11T09:12:59,534][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-async]
+[2025-08-11T09:12:59,535][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [vector-tile]
+[2025-08-11T09:12:59,535][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-kql]
+[2025-08-11T09:12:59,536][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [lang-expression]
+[2025-08-11T09:12:59,536][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-otel]
+[2025-08-11T09:12:59,536][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-eql]
+[2025-08-11T09:13:01,357][WARN ][stderr                   ] [DESKTOP-I62NE16] SLF4J: No SLF4J providers were found.
+[2025-08-11T09:13:01,357][WARN ][stderr                   ] [DESKTOP-I62NE16] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2025-08-11T09:13:01,358][WARN ][stderr                   ] [DESKTOP-I62NE16] SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2025-08-11T09:13:03,031][INFO ][o.e.e.NodeEnvironment    ] [DESKTOP-I62NE16] using [1] data paths, mounts [[Windows (C:)]], net usable_space [57gb], net total_space [236.9gb], types [NTFS]
+[2025-08-11T09:13:03,032][INFO ][o.e.e.NodeEnvironment    ] [DESKTOP-I62NE16] heap size [3.6gb], compressed ordinary object pointers [true]
+[2025-08-11T09:13:03,054][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] node name [DESKTOP-I62NE16], node ID [vWBMfjI9RTC03ouZKx7PkQ], cluster name [elasticsearch], roles [master, data_warm, data_content, transform, data_hot, ml, data_frozen, ingest, data_cold, data, remote_cluster_client]
+[2025-08-11T09:13:07,152][INFO ][o.e.f.FeatureService     ] [DESKTOP-I62NE16] Registered local node features [ES_V_8, ES_V_9, cluster.reroute.ignores_metric_param, cluster.stats.source_modes, data_stream.failure_store, linear_retriever_supported, lucene_10_1_upgrade, lucene_10_upgrade, security.queryable_built_in_roles, simulate.ignored.fields, snapshots.get.state_parameter]
+[2025-08-11T09:13:07,525][INFO ][o.e.i.r.RecoverySettings ] [DESKTOP-I62NE16] using rate limit [40mb] with [default=40mb, read=0b, write=0b, max=0b]
+[2025-08-11T09:13:07,885][INFO ][o.e.c.m.DataStreamGlobalRetentionSettings] [DESKTOP-I62NE16] Updated global default retention to [null]
+[2025-08-11T09:13:07,887][INFO ][o.e.c.m.DataStreamGlobalRetentionSettings] [DESKTOP-I62NE16] Updated global max retention to [null]
+[2025-08-11T09:13:07,889][INFO ][o.e.c.m.DataStreamGlobalRetentionSettings] [DESKTOP-I62NE16] Updated failures default retention to [30d]
+[2025-08-11T09:13:07,891][INFO ][o.e.c.m.DataStreamFailureStoreSettings] [DESKTOP-I62NE16] Updated data stream name patterns for enabling failure store to [[]]
+[2025-08-11T09:13:08,693][INFO ][o.e.x.m.p.l.CppLogMessageHandler] [DESKTOP-I62NE16] [controller/4676] [Main.cc@123] controller (64 bit): Version 9.1.1 (Build f7ccb1c45779fa) Copyright (c) 2025 Elasticsearch BV
+[2025-08-11T09:13:09,352][INFO ][o.e.x.o.OTelPlugin       ] [DESKTOP-I62NE16] OTel ingest plugin is enabled
+[2025-08-11T09:13:09,392][INFO ][o.e.x.c.t.YamlTemplateRegistry] [DESKTOP-I62NE16] OpenTelemetry index template registry is enabled
+[2025-08-11T09:13:09,400][INFO ][o.e.t.a.APM              ] [DESKTOP-I62NE16] Sending apm metrics is disabled
+[2025-08-11T09:13:09,401][INFO ][o.e.t.a.APM              ] [DESKTOP-I62NE16] Sending apm tracing is disabled
+[2025-08-11T09:13:09,473][INFO ][o.e.x.s.Security         ] [DESKTOP-I62NE16] Security is enabled
+[2025-08-11T09:13:10,027][INFO ][o.e.x.s.a.s.FileRolesStore] [DESKTOP-I62NE16] parsed [0] roles from file [C:\elasticsearch-9.1.1\config\roles.yml]
+[2025-08-11T09:13:10,977][INFO ][o.e.x.w.Watcher          ] [DESKTOP-I62NE16] Watcher initialized components at 2025-08-11T03:43:10.975Z
+[2025-08-11T09:13:11,184][INFO ][o.e.x.p.ProfilingPlugin  ] [DESKTOP-I62NE16] Profiling is enabled
+[2025-08-11T09:13:11,211][INFO ][o.e.x.p.ProfilingPlugin  ] [DESKTOP-I62NE16] profiling index templates will not be installed or reinstalled
+[2025-08-11T09:13:11,222][INFO ][o.e.x.a.APMPlugin        ] [DESKTOP-I62NE16] APM ingest plugin is enabled
+[2025-08-11T09:13:11,284][INFO ][o.e.x.c.t.YamlTemplateRegistry] [DESKTOP-I62NE16] apm index template registry is enabled
+[2025-08-11T09:13:12,043][INFO ][o.e.t.n.NettyAllocator   ] [DESKTOP-I62NE16] creating NettyAllocator with the following configs: [name=elasticsearch_configured, chunk_size=1mb, suggested_max_allocation_size=1mb, factors={es.unsafe.use_netty_default_chunk_and_page_size=false, g1gc_enabled=true, g1gc_region_size=4mb}]
+[2025-08-11T09:13:12,153][INFO ][o.e.d.DiscoveryModule    ] [DESKTOP-I62NE16] using discovery type [multi-node] and seed hosts providers [settings]
+[2025-08-11T09:13:14,356][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] initialized
+[2025-08-11T09:13:14,357][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] starting ...
+[2025-08-11T09:13:21,217][INFO ][o.e.r.s.S3RepositoryPlugin] [DESKTOP-I62NE16] failed to obtain region from default provider chain
+software.amazon.awssdk.core.exception.SdkClientException: Unable to load region from any of the providers in the chain software.amazon.awssdk.regions.providers.DefaultAwsRegionProviderChain@440500f8: [software.amazon.awssdk.regions.providers.SystemSettingsRegionProvider@7b9b0006: Unable to load region from system settings. Region must be specified either via environment variable (AWS_REGION) or  system property (aws.region)., software.amazon.awssdk.regions.providers.AwsProfileRegionProvider@18bfde9e: No region provided in profile: default, software.amazon.awssdk.regions.providers.InstanceProfileRegionProvider@31443ab9: Unable to contact EC2 metadata service.]
+	at software.amazon.awssdk.core.exception.SdkClientException$BuilderImpl.build(SdkClientException.java:130) ~[?:?]
+	at software.amazon.awssdk.regions.providers.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:70) ~[?:?]
+	at org.elasticsearch.repositories.s3.S3RepositoryPlugin.getDefaultRegion(S3RepositoryPlugin.java:102) ~[?:?]
+	at org.elasticsearch.repositories.s3.S3Service.lambda$new$0(S3Service.java:132) ~[?:?]
+	at org.elasticsearch.common.util.concurrent.RunOnce.run(RunOnce.java:41) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.repositories.s3.S3Service.doStart(S3Service.java:418) ~[?:?]
+	at org.elasticsearch.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:51) ~[elasticsearch-9.1.1.jar:?]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at org.elasticsearch.node.Node.start(Node.java:278) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.start(Elasticsearch.java:620) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.initPhase3(Elasticsearch.java:420) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:100) ~[elasticsearch-9.1.1.jar:?]
+[2025-08-11T09:13:21,252][INFO ][o.e.x.s.c.f.PersistentCache] [DESKTOP-I62NE16] persistent cache index loaded
+[2025-08-11T09:13:21,253][INFO ][o.e.x.d.l.DeprecationIndexingComponent] [DESKTOP-I62NE16] deprecation component started
+[2025-08-11T09:13:21,431][INFO ][o.e.t.TransportService   ] [DESKTOP-I62NE16] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2025-08-11T09:13:21,658][INFO ][o.e.c.c.ClusterBootstrapService] [DESKTOP-I62NE16] this node has not joined a bootstrapped cluster yet; [cluster.initial_master_nodes] is set to [DESKTOP-I62NE16]
+[2025-08-11T09:13:21,666][INFO ][o.e.c.c.Coordinator      ] [DESKTOP-I62NE16] setting initial configuration to VotingConfiguration{vWBMfjI9RTC03ouZKx7PkQ}
+[2025-08-11T09:13:22,030][INFO ][o.e.c.s.MasterService    ] [DESKTOP-I62NE16] elected-as-master ([1] nodes joined in term 1)[_FINISH_ELECTION_, {DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{Dd3-wfcwTIyO57nxMzt5LA}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000} completing election], term: 1, version: 1, delta: master node changed {previous [], current [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{Dd3-wfcwTIyO57nxMzt5LA}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}]}
+[2025-08-11T09:13:22,160][INFO ][o.e.c.c.CoordinationState] [DESKTOP-I62NE16] cluster UUID set to [4wyQ9oGlS4-SKHtAHAxnog]
+[2025-08-11T09:13:22,294][INFO ][o.e.c.s.ClusterApplierService] [DESKTOP-I62NE16] master node changed {previous [], current [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{Dd3-wfcwTIyO57nxMzt5LA}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}]}, term: 1, version: 1, reason: Publication{term=1, version=1}
+[2025-08-11T09:13:22,357][INFO ][o.e.c.c.NodeJoinExecutor ] [DESKTOP-I62NE16] node-join: [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{Dd3-wfcwTIyO57nxMzt5LA}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}] with reason [completing election]
+[2025-08-11T09:13:22,362][INFO ][o.e.h.AbstractHttpServerTransport] [DESKTOP-I62NE16] publish_address {192.168.232.171:9200}, bound_addresses {[::]:9200}
+[2025-08-11T09:13:22,384][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] started {DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{Dd3-wfcwTIyO57nxMzt5LA}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}{xpack.installed=true, ml.config_version=12.0.0, ml.max_jvm_size=3955228672, ml.allocated_processors_double=12.0, ml.allocated_processors=12, ml.machine_memory=7907368960, transform.config_version=10.0.0}
+[2025-08-11T09:13:22,563][INFO ][o.e.x.m.MlIndexRollover  ] [DESKTOP-I62NE16] ML legacy indices rolled over
+[2025-08-11T09:13:22,564][INFO ][o.e.x.m.MlAnomaliesIndexUpdate] [DESKTOP-I62NE16] legacy ml anomalies indices rolled over and aliases updated
+[2025-08-11T09:13:22,601][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] starting file watcher ...
+[2025-08-11T09:13:22,613][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] file settings service up and running [tid=115]
+[2025-08-11T09:13:22,616][INFO ][o.e.r.s.FileSettingsService] [DESKTOP-I62NE16] setting file [C:\elasticsearch-9.1.1\config\operator\settings.json] not found, initializing [file_settings] as empty
+[2025-08-11T09:13:22,638][INFO ][o.e.x.s.s.SecurityIndexManager] [DESKTOP-I62NE16] security index does not exist, creating [.security-7] with alias [.security]
+[2025-08-11T09:13:22,639][INFO ][o.e.g.GatewayService     ] [DESKTOP-I62NE16] recovered [0] indices into cluster_state
+[2025-08-11T09:13:22,899][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [elastic-connectors-mappings]
+[2025-08-11T09:13:22,906][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [elastic-connectors-sync-jobs-settings]
+[2025-08-11T09:13:22,920][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [elastic-connectors-sync-jobs-mappings]
+[2025-08-11T09:13:22,927][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [elastic-connectors-settings]
+[2025-08-11T09:13:22,960][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [behavioral_analytics-events-mappings]
+[2025-08-11T09:13:22,990][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding template [.monitoring-beats] for index patterns [.monitoring-beats-7-*]
+[2025-08-11T09:13:23,049][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.monitoring-logstash-mb] for index patterns [.monitoring-logstash-8-*]
+[2025-08-11T09:13:23,074][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.monitoring-kibana-mb] for index patterns [.monitoring-kibana-8-*]
+[2025-08-11T09:13:23,084][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.ml-state] for index patterns [.ml-state*]
+[2025-08-11T09:13:23,105][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.monitoring-ent-search-mb] for index patterns [.monitoring-ent-search-8-*]
+[2025-08-11T09:13:23,121][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.ml-notifications-000002] for index patterns [.ml-notifications-*]
+[2025-08-11T09:13:23,135][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding template [.monitoring-logstash] for index patterns [.monitoring-logstash-7-*]
+[2025-08-11T09:13:23,145][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [search-acl-filter] for index patterns [.search-acl-filter-*]
+[2025-08-11T09:13:23,175][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding template [.monitoring-es] for index patterns [.monitoring-es-7-*]
+[2025-08-11T09:13:23,187][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding template [.monitoring-alerts-7] for index patterns [.monitoring-alerts-7]
+[2025-08-11T09:13:23,199][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding template [.monitoring-kibana] for index patterns [.monitoring-kibana-7-*]
+[2025-08-11T09:13:23,235][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.ml-anomalies-] for index patterns [.ml-anomalies-*]
+[2025-08-11T09:13:23,267][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.monitoring-beats-mb] for index patterns [.monitoring-beats-8-*]
+[2025-08-11T09:13:23,306][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.monitoring-es-mb] for index patterns [.monitoring-es-8-*]
+[2025-08-11T09:13:23,316][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.ml-stats] for index patterns [.ml-stats-*]
+[2025-08-11T09:13:23,324][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [ecs-tsdb@mappings]
+[2025-08-11T09:13:23,339][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [otel@mappings]
+[2025-08-11T09:13:23,344][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-otel@mappings]
+[2025-08-11T09:13:23,369][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [traces-otel@mappings]
+[2025-08-11T09:13:23,376][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [semconv-resource-to-ecs@mappings]
+[2025-08-11T09:13:23,398][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [logs-otel@mappings]
+[2025-08-11T09:13:23,402][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [logs-mappings]
+[2025-08-11T09:13:23,404][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-settings]
+[2025-08-11T09:13:23,409][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-mappings]
+[2025-08-11T09:13:23,414][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [data-streams-mappings]
+[2025-08-11T09:13:23,418][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [agentless@mappings]
+[2025-08-11T09:13:23,422][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [synthetics-settings]
+[2025-08-11T09:13:23,428][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [ecs@dynamic_templates]
+[2025-08-11T09:13:23,432][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [traces@settings]
+[2025-08-11T09:13:23,438][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [synthetics-mappings]
+[2025-08-11T09:13:23,443][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-tsdb-settings]
+[2025-08-11T09:13:23,450][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [data-streams@mappings]
+[2025-08-11T09:13:23,456][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics@mappings]
+[2025-08-11T09:13:23,464][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [ecs@mappings]
+[2025-08-11T09:13:23,470][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [traces@mappings]
+[2025-08-11T09:13:23,477][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [synthetics@mappings]
+[2025-08-11T09:13:23,483][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics@tsdb-settings]
+[2025-08-11T09:13:23,488][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [kibana-reporting@settings]
+[2025-08-11T09:13:23,493][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics@settings]
+[2025-08-11T09:13:23,497][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [agentless@settings]
+[2025-08-11T09:13:23,503][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [logs@mappings]
+[2025-08-11T09:13:23,508][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [synthetics@settings]
+[2025-08-11T09:13:23,521][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.watch-history-17] for index patterns [.watcher-history-17*]
+[2025-08-11T09:13:23,529][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.slm-history-7] for index patterns [.slm-history-7*]
+[2025-08-11T09:13:23,537][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [ilm-history-7] for index patterns [ilm-history-7*]
+[2025-08-11T09:13:23,541][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [.deprecation-indexing-settings]
+[2025-08-11T09:13:23,547][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [.deprecation-indexing-mappings]
+[2025-08-11T09:13:23,555][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.fleet-fileds-tohost-data] for index patterns [.fleet-fileds-tohost-data-*]
+[2025-08-11T09:13:23,562][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.fleet-fileds-tohost-meta] for index patterns [.fleet-fileds-tohost-meta-*]
+[2025-08-11T09:13:23,570][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.fleet-fileds-fromhost-meta] for index patterns [.fleet-fileds-fromhost-meta-*]
+[2025-08-11T09:13:23,578][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.fleet-fileds-fromhost-data] for index patterns [.fleet-fileds-fromhost-data-*]
+[2025-08-11T09:13:23,581][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_destination.10m-fallback@ilm]
+[2025-08-11T09:13:23,585][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.transaction.1m-fallback@ilm]
+[2025-08-11T09:13:23,588][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [traces-apm.sampled-fallback@ilm]
+[2025-08-11T09:13:23,591][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_summary.1m-fallback@ilm]
+[2025-08-11T09:13:23,596][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [traces-apm.rum@mappings]
+[2025-08-11T09:13:23,599][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [apm-90d@lifecycle]
+[2025-08-11T09:13:23,603][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [apm-180d@lifecycle]
+[2025-08-11T09:13:23,608][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [apm@settings]
+[2025-08-11T09:13:23,622][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.transaction@mappings]
+[2025-08-11T09:13:23,625][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [apm@mappings]
+[2025-08-11T09:13:23,629][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_destination@mappings]
+[2025-08-11T09:13:23,632][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_destination.60m-fallback@ilm]
+[2025-08-11T09:13:23,635][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [apm-10d@lifecycle]
+[2025-08-11T09:13:23,637][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [traces-apm.rum-fallback@ilm]
+[2025-08-11T09:13:23,641][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [apm-390d@lifecycle]
+[2025-08-11T09:13:23,644][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_transaction.10m-fallback@ilm]
+[2025-08-11T09:13:23,649][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_destination.1m-fallback@ilm]
+[2025-08-11T09:13:23,652][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [logs-apm.app-fallback@ilm]
+[2025-08-11T09:13:23,656][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_transaction.1m-fallback@ilm]
+[2025-08-11T09:13:23,659][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_summary.10m-fallback@ilm]
+[2025-08-11T09:13:23,664][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.transaction.10m-fallback@ilm]
+[2025-08-11T09:13:23,668][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm@mappings]
+[2025-08-11T09:13:23,672][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [traces-apm-fallback@ilm]
+[2025-08-11T09:13:23,675][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_summary.60m-fallback@ilm]
+[2025-08-11T09:13:23,678][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.internal-fallback@ilm]
+[2025-08-11T09:13:23,682][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_transaction.60m-fallback@ilm]
+[2025-08-11T09:13:23,686][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm@settings]
+[2025-08-11T09:13:23,691][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [logs-apm.error-fallback@ilm]
+[2025-08-11T09:13:23,696][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [logs-apm@settings]
+[2025-08-11T09:13:23,701][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_transaction@mappings]
+[2025-08-11T09:13:23,707][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [traces-apm@mappings]
+[2025-08-11T09:13:23,711][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.app-fallback@ilm]
+[2025-08-11T09:13:23,716][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.transaction.60m-fallback@ilm]
+[2025-08-11T09:13:23,721][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [metrics-apm.service_summary@mappings]
+[2025-08-11T09:13:23,775][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [logs-apm.error@mappings]
+[2025-08-11T09:13:24,183][INFO ][o.e.c.m.MetadataCreateIndexService] [DESKTOP-I62NE16] creating index [.security-7] in project [default], cause [api], templates [], shards [1]/[1]
+[2025-08-11T09:13:24,206][INFO ][o.e.c.r.a.AllocationService] [DESKTOP-I62NE16] in project [default] updating number_of_replicas to [0] for indices [.security-7]
+[2025-08-11T09:13:24,212][INFO ][o.e.x.w.LicensedWriteLoadForecaster] [DESKTOP-I62NE16] license state changed, now [valid]
+[2025-08-11T09:13:24,398][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [elastic-connectors-sync-jobs] for index patterns [.elastic-connectors-sync-jobs-v1]
+[2025-08-11T09:13:24,407][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [elastic-connectors] for index patterns [.elastic-connectors-v1]
+[2025-08-11T09:13:24,451][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-otel@template] for index patterns [metrics-*.otel-*]
+[2025-08-11T09:13:24,474][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-service_summary.10m.otel@template] for index patterns [metrics-service_summary.10m.otel-*]
+[2025-08-11T09:13:24,501][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-service_transaction.10m.otel@template] for index patterns [metrics-service_transaction.10m.otel-*]
+[2025-08-11T09:13:24,526][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-service_destination.10m@template] for index patterns [metrics-service_destination.10m.otel-*]
+[2025-08-11T09:13:24,550][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-transaction.10m.otel@template] for index patterns [metrics-transaction.10m.otel-*]
+[2025-08-11T09:13:24,572][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-service_destination.1m@template] for index patterns [metrics-service_destination.1m.otel-*]
+[2025-08-11T09:13:24,596][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-service_summary.60m.otel@template] for index patterns [metrics-service_summary.60m.otel-*]
+[2025-08-11T09:13:24,609][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [traces-otel@template] for index patterns [traces-*.otel-*]
+[2025-08-11T09:13:24,629][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-transaction.1m.otel@template] for index patterns [metrics-transaction.1m.otel-*]
+[2025-08-11T09:13:24,638][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics] for index patterns [metrics-*-*]
+[2025-08-11T09:13:24,660][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-transaction.60m.otel@template] for index patterns [metrics-transaction.60m.otel-*]
+[2025-08-11T09:13:24,667][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [synthetics] for index patterns [synthetics-*-*]
+[2025-08-11T09:13:24,692][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-service_destination.60m@template] for index patterns [metrics-service_destination.60m.otel-*]
+[2025-08-11T09:13:24,714][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-service_summary.1m.otel@template] for index patterns [metrics-service_summary.1m.otel-*]
+[2025-08-11T09:13:24,736][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-service_transaction.60m.otel@template] for index patterns [metrics-service_transaction.60m.otel-*]
+[2025-08-11T09:13:24,762][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-service_transaction.1m.otel@template] for index patterns [metrics-service_transaction.1m.otel-*]
+[2025-08-11T09:13:24,767][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [agentless] for index patterns [agentless-*-*]
+[2025-08-11T09:13:24,774][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.deprecation-indexing-template] for index patterns [.logs-deprecation.*]
+[2025-08-11T09:13:24,782][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.deprecation-indexing-template-9] for index patterns [.logs-elasticsearch.deprecation-*]
+[2025-08-11T09:13:24,800][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.service_destination.60m@template] for index patterns [metrics-apm.service_destination.60m-*]
+[2025-08-11T09:13:24,812][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.service_transaction.1m@template] for index patterns [metrics-apm.service_transaction.1m-*]
+[2025-08-11T09:13:24,824][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.internal@template] for index patterns [metrics-apm.internal-*]
+[2025-08-11T09:13:24,837][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.transaction.10m@template] for index patterns [metrics-apm.transaction.10m-*]
+[2025-08-11T09:13:24,847][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [.kibana-reporting] for index patterns [.kibana-reporting*]
+[2025-08-11T09:13:24,860][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.service_summary.60m@template] for index patterns [metrics-apm.service_summary.60m-*]
+[2025-08-11T09:13:24,871][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [logs-apm.error@template] for index patterns [logs-apm.error-*]
+[2025-08-11T09:13:24,883][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.app@template] for index patterns [metrics-apm.app.*-*]
+[2025-08-11T09:13:24,893][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [traces-apm@template] for index patterns [traces-apm-*]
+[2025-08-11T09:13:24,904][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.service_summary.10m@template] for index patterns [metrics-apm.service_summary.10m-*]
+[2025-08-11T09:13:24,916][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [traces-apm.rum@template] for index patterns [traces-apm.rum-*]
+[2025-08-11T09:13:24,927][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.transaction.1m@template] for index patterns [metrics-apm.transaction.1m-*]
+[2025-08-11T09:13:24,937][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.service_destination.1m@template] for index patterns [metrics-apm.service_destination.1m-*]
+[2025-08-11T09:13:24,948][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.service_summary.1m@template] for index patterns [metrics-apm.service_summary.1m-*]
+[2025-08-11T09:13:24,961][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.service_transaction.60m@template] for index patterns [metrics-apm.service_transaction.60m-*]
+[2025-08-11T09:13:24,972][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.service_destination.10m@template] for index patterns [metrics-apm.service_destination.10m-*]
+[2025-08-11T09:13:24,982][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.service_transaction.10m@template] for index patterns [metrics-apm.service_transaction.10m-*]
+[2025-08-11T09:13:25,002][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [traces-apm.sampled@template] for index patterns [traces-apm.sampled-*]
+[2025-08-11T09:13:25,012][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [metrics-apm.transaction.60m@template] for index patterns [metrics-apm.transaction.60m-*]
+[2025-08-11T09:13:25,023][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [logs-apm.app@template] for index patterns [logs-apm.app.*-*]
+[2025-08-11T09:13:25,435][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [.monitoring-8-ilm-policy]
+[2025-08-11T09:13:25,436][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [ml-size-based-ilm-policy]
+[2025-08-11T09:13:25,437][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [7-days-default]
+[2025-08-11T09:13:25,438][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [logs]
+[2025-08-11T09:13:25,438][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [synthetics]
+[2025-08-11T09:13:25,439][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [30-days-default]
+[2025-08-11T09:13:25,440][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [90-days-default]
+[2025-08-11T09:13:25,440][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [365-days-default]
+[2025-08-11T09:13:25,441][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [180-days-default]
+[2025-08-11T09:13:25,442][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics]
+[2025-08-11T09:13:25,442][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [logs@lifecycle]
+[2025-08-11T09:13:25,443][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [traces@lifecycle]
+[2025-08-11T09:13:25,444][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [synthetics@lifecycle]
+[2025-08-11T09:13:25,444][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [180-days@lifecycle]
+[2025-08-11T09:13:25,445][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [365-days@lifecycle]
+[2025-08-11T09:13:25,446][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics@lifecycle]
+[2025-08-11T09:13:25,447][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [7-days@lifecycle]
+[2025-08-11T09:13:25,447][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [90-days@lifecycle]
+[2025-08-11T09:13:25,448][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [30-days@lifecycle]
+[2025-08-11T09:13:25,449][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [slm-history-ilm-policy]
+[2025-08-11T09:13:25,450][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [watch-history-ilm-policy-16]
+[2025-08-11T09:13:25,450][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [ilm-history-ilm-policy]
+[2025-08-11T09:13:25,451][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [.fleet-file-tohost-data-ilm-policy]
+[2025-08-11T09:13:25,452][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [.fleet-file-tohost-meta-ilm-policy]
+[2025-08-11T09:13:25,453][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [.deprecation-indexing-ilm-policy]
+[2025-08-11T09:13:25,453][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [.fleet-actions-results-ilm-policy]
+[2025-08-11T09:13:25,454][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [.fleet-file-fromhost-data-ilm-policy]
+[2025-08-11T09:13:25,455][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [.fleet-file-fromhost-meta-ilm-policy]
+[2025-08-11T09:13:25,455][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.app_metrics-default_policy]
+[2025-08-11T09:13:25,456][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [logs-apm.error_logs-default_policy]
+[2025-08-11T09:13:25,457][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [logs-apm.app_logs-default_policy]
+[2025-08-11T09:13:25,458][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.internal_metrics-default_policy]
+[2025-08-11T09:13:25,459][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.service_destination_10m_metrics-default_policy]
+[2025-08-11T09:13:25,460][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.service_destination_1m_metrics-default_policy]
+[2025-08-11T09:13:25,461][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.service_summary_10m_metrics-default_policy]
+[2025-08-11T09:13:25,462][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.service_transaction_60m_metrics-default_policy]
+[2025-08-11T09:13:25,463][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.service_summary_1m_metrics-default_policy]
+[2025-08-11T09:13:25,464][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.transaction_10m_metrics-default_policy]
+[2025-08-11T09:13:25,466][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.service_transaction_10m_metrics-default_policy]
+[2025-08-11T09:13:25,467][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.service_summary_60m_metrics-default_policy]
+[2025-08-11T09:13:25,468][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [traces-apm.rum_traces-default_policy]
+[2025-08-11T09:13:25,469][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.transaction_1m_metrics-default_policy]
+[2025-08-11T09:13:25,469][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.service_transaction_1m_metrics-default_policy]
+[2025-08-11T09:13:25,471][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [traces-apm.sampled_traces-default_policy]
+[2025-08-11T09:13:25,471][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [traces-apm.traces-default_policy]
+[2025-08-11T09:13:25,473][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.transaction_60m_metrics-default_policy]
+[2025-08-11T09:13:25,474][INFO ][o.e.x.i.a.TransportPutLifecycleAction] [DESKTOP-I62NE16] adding index lifecycle policy [metrics-apm.service_destination_60m_metrics-default_policy]
+[2025-08-11T09:13:25,674][INFO ][o.e.c.r.a.AllocationService] [DESKTOP-I62NE16] current.health="GREEN" message="Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.security-7][0]]])." previous.health="YELLOW" reason="shards started [[.security-7][0]]"
+[2025-08-11T09:13:25,981][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline logs-default-pipeline
+[2025-08-11T09:13:25,982][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline reindex-data-stream-pipeline
+[2025-08-11T09:13:25,982][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline behavioral_analytics-events-final_pipeline
+[2025-08-11T09:13:25,983][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline logs@default-pipeline
+[2025-08-11T09:13:25,983][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline metrics-apm.service_summary@default-pipeline
+[2025-08-11T09:13:25,983][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline metrics-apm.app@default-pipeline
+[2025-08-11T09:13:25,984][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline metrics-apm.service_transaction@default-pipeline
+[2025-08-11T09:13:25,984][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline traces-apm@default-pipeline
+[2025-08-11T09:13:25,984][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline logs-apm.error@default-pipeline
+[2025-08-11T09:13:25,985][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline metrics-apm.service_destination@default-pipeline
+[2025-08-11T09:13:25,985][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline metrics-apm.transaction@default-pipeline
+[2025-08-11T09:13:25,985][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline traces-apm.rum@default-pipeline
+[2025-08-11T09:13:25,986][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline apm@pipeline
+[2025-08-11T09:13:25,986][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline logs-apm.app@default-pipeline
+[2025-08-11T09:13:25,986][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline search-default-ingestion
+[2025-08-11T09:13:25,987][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline logs@json-pipeline
+[2025-08-11T09:13:25,987][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline logs@json-message
+[2025-08-11T09:13:25,990][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [behavioral_analytics-events-settings]
+[2025-08-11T09:13:25,995][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [logs-settings]
+[2025-08-11T09:13:25,998][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding component template [logs@settings]
+[2025-08-11T09:13:26,172][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [behavioral_analytics-events-default] for index patterns [behavioral_analytics-events-*]
+[2025-08-11T09:13:26,181][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [logs] for index patterns [logs-*-*]
+[2025-08-11T09:13:26,194][INFO ][o.e.c.m.MetadataIndexTemplateService] [DESKTOP-I62NE16] adding index template [logs-otel@template] for index patterns [logs-*.otel-*]
+[2025-08-11T09:13:26,664][INFO ][o.e.h.n.s.HealthNodeTaskExecutor] [DESKTOP-I62NE16] Node [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}] is selected as the current health node.
+[2025-08-11T09:13:26,881][INFO ][o.e.x.s.a.Realms         ] [DESKTOP-I62NE16] license mode is [basic], currently licensed security realms are [reserved/reserved,file/default_file,native/default_native]
+[2025-08-11T09:13:26,885][INFO ][o.e.l.ClusterStateLicenseService] [DESKTOP-I62NE16] license [dd8f2a23-dcdd-4ab0-9b29-d718613c55e1] mode [basic] - valid
+[2025-08-11T09:13:27,175][INFO ][o.e.x.w.LicensedWriteLoadForecaster] [DESKTOP-I62NE16] license state changed, now [not valid]
+[2025-08-11T09:13:27,318][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline logs-apm@pipeline
+[2025-08-11T09:13:27,319][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline metrics-apm.internal@default-pipeline
+[2025-08-11T09:13:27,319][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline metrics-apm@pipeline
+[2025-08-11T09:13:27,319][INFO ][o.e.x.c.t.IndexTemplateRegistry] [DESKTOP-I62NE16] adding ingest pipeline traces-apm@pipeline
+[2025-08-11T09:13:27,448][INFO ][o.e.x.s.s.QueryableBuiltInRolesSynchronizer] [DESKTOP-I62NE16] Successfully synced [29] built-in roles to .security index
+[2025-08-11T09:13:27,565][INFO ][o.e.x.s.s.SecurityMigrationExecutor] [DESKTOP-I62NE16] Security migration not needed. Setting current version to: [2]
+[2025-08-11T09:13:27,581][INFO ][o.e.c.m.MetadataCreateIndexService] [DESKTOP-I62NE16] creating index [.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001] in project [default], cause [initialize_data_stream], templates [provided in request], shards [1]/[1]
+[2025-08-11T09:13:27,586][INFO ][o.e.c.m.MetadataCreateDataStreamService] [DESKTOP-I62NE16] adding data stream [.logs-elasticsearch.deprecation-default] with write index [.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001], backing indices [], and aliases []
+[2025-08-11T09:13:27,589][INFO ][o.e.c.r.a.AllocationService] [DESKTOP-I62NE16] in project [default] updating number_of_replicas to [0] for indices [.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001]
+[2025-08-11T09:13:28,040][INFO ][o.e.c.r.a.AllocationService] [DESKTOP-I62NE16] current.health="GREEN" message="Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001][0]]])." previous.health="YELLOW" reason="shards started [[.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001][0]]"
+[2025-08-11T09:13:28,195][INFO ][o.e.x.i.IndexLifecycleTransition] [DESKTOP-I62NE16] moving index [.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001] from [null] to [{"phase":"new","action":"complete","name":"complete"}] in policy [.deprecation-indexing-ilm-policy]
+[2025-08-11T09:13:28,338][INFO ][o.e.c.m.MetadataMappingService] [DESKTOP-I62NE16] [.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001/q4HbEo0hSBiu0w4ZrNJ2Gw] update_mapping [_doc]
+[2025-08-11T09:13:28,461][INFO ][o.e.x.i.IndexLifecycleTransition] [DESKTOP-I62NE16] moving index [.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001] from [{"phase":"new","action":"complete","name":"complete"}] to [{"phase":"hot","action":"unfollow","name":"branch-check-unfollow-prerequisites"}] in policy [.deprecation-indexing-ilm-policy]
+[2025-08-11T09:13:28,577][INFO ][o.e.x.i.IndexLifecycleTransition] [DESKTOP-I62NE16] moving index [.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001] from [{"phase":"hot","action":"unfollow","name":"branch-check-unfollow-prerequisites"}] to [{"phase":"hot","action":"rollover","name":"check-rollover-ready"}] in policy [.deprecation-indexing-ilm-policy]
+[2025-08-11T09:13:31,515][INFO ][o.e.x.s.InitialNodeSecurityAutoConfiguration] [DESKTOP-I62NE16] HTTPS has been configured with automatically generated certificates, and the CA's hex-encoded SHA-256 fingerprint is [985bb7bdfc27d677186413398d55ba4a7c03f32df74687954e754a539af2c86a]
+[2025-08-11T09:13:31,526][INFO ][o.e.x.s.e.InternalEnrollmentTokenGenerator] [DESKTOP-I62NE16] Will not generate node enrollment token because node is only bound on localhost for transport and cannot connect to nodes from other hosts
+[2025-08-11T09:13:33,342][INFO ][o.e.c.m.MetadataCreateIndexService] [DESKTOP-I62NE16] creating index [.ds-ilm-history-7-2025.08.11-000001] in project [default], cause [initialize_data_stream], templates [provided in request], shards [1]/[1]
+[2025-08-11T09:13:33,343][INFO ][o.e.c.m.MetadataCreateDataStreamService] [DESKTOP-I62NE16] adding data stream [ilm-history-7] with write index [.ds-ilm-history-7-2025.08.11-000001], backing indices [], and aliases []
+[2025-08-11T09:13:33,344][INFO ][o.e.c.r.a.AllocationService] [DESKTOP-I62NE16] in project [default] updating number_of_replicas to [0] for indices [.ds-ilm-history-7-2025.08.11-000001]
+[2025-08-11T09:13:33,676][INFO ][o.e.c.r.a.AllocationService] [DESKTOP-I62NE16] current.health="GREEN" message="Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.ds-ilm-history-7-2025.08.11-000001][0]]])." previous.health="YELLOW" reason="shards started [[.ds-ilm-history-7-2025.08.11-000001][0]]"
+[2025-08-11T09:17:35,881][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54655}
+[2025-08-11T09:17:36,935][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54656}
+[2025-08-11T09:17:36,935][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54662}
+[2025-08-11T09:17:41,971][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54663}
+[2025-08-11T09:17:41,974][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54666}
+[2025-08-11T09:17:48,798][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [DESKTOP-I62NE16] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9300, remoteAddress=/[0:0:0:0:0:0:0:1]:54670, profile=default}
+[2025-08-11T09:17:49,843][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [DESKTOP-I62NE16] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9300, remoteAddress=/[0:0:0:0:0:0:0:1]:54671, profile=default}
+[2025-08-11T09:17:49,843][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [DESKTOP-I62NE16] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9300, remoteAddress=/[0:0:0:0:0:0:0:1]:54674, profile=default}
+[2025-08-11T09:17:49,849][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [DESKTOP-I62NE16] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9300, remoteAddress=/[0:0:0:0:0:0:0:1]:54675, profile=default}
+[2025-08-11T09:17:54,876][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [DESKTOP-I62NE16] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9300, remoteAddress=/[0:0:0:0:0:0:0:1]:54678, profile=default}
+[2025-08-11T09:18:14,177][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [DESKTOP-I62NE16] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9300, remoteAddress=/[0:0:0:0:0:0:0:1]:54683, profile=default}
+[2025-08-11T09:18:15,232][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [DESKTOP-I62NE16] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9300, remoteAddress=/[0:0:0:0:0:0:0:1]:54684, profile=default}
+[2025-08-11T09:18:15,234][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [DESKTOP-I62NE16] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9300, remoteAddress=/[0:0:0:0:0:0:0:1]:54687, profile=default}
+[2025-08-11T09:18:20,255][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [DESKTOP-I62NE16] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9300, remoteAddress=/[0:0:0:0:0:0:0:1]:54688, profile=default}
+[2025-08-11T09:18:20,258][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [DESKTOP-I62NE16] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9300, remoteAddress=/[0:0:0:0:0:0:0:1]:54689, profile=default}
+[2025-08-11T09:19:52,520][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54750}
+[2025-08-11T09:19:53,553][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54751}
+[2025-08-11T09:19:53,553][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54755}
+[2025-08-11T09:19:58,599][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54756}
+[2025-08-11T09:19:58,603][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54759}
+[2025-08-11T09:20:01,665][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54760}
+[2025-08-11T09:20:01,665][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54763}
+[2025-08-11T09:20:01,672][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54765}
+[2025-08-11T09:20:02,722][WARN ][o.e.h.n.Netty4HttpServerTransport] [DESKTOP-I62NE16] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54768}
+[2025-08-11T09:23:34,374][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] stopping ...
+[2025-08-11T09:23:34,375][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] shutting down watcher thread
+[2025-08-11T09:23:34,378][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] watcher service stopped
+[2025-08-11T09:23:34,380][INFO ][o.e.x.w.WatcherService   ] [DESKTOP-I62NE16] stopping watch service, reason [shutdown initiated]
+[2025-08-11T09:23:34,381][INFO ][o.e.x.w.t.s.e.TickerScheduleTriggerEngine] [DESKTOP-I62NE16] Stopping watcher engine
+[2025-08-11T09:23:34,381][INFO ][o.e.x.m.p.l.CppLogMessageHandler] [DESKTOP-I62NE16] [controller/4676] [Main.cc@176] ML controller exiting
+[2025-08-11T09:23:34,381][INFO ][o.e.x.w.WatcherLifeCycleService] [DESKTOP-I62NE16] watcher has stopped and shutdown
+[2025-08-11T09:23:34,385][INFO ][o.e.x.m.p.NativeController] [DESKTOP-I62NE16] Native controller process has stopped - no new native processes can be started
+[2025-08-11T09:23:34,573][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] stopped
+[2025-08-11T09:23:34,573][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] closing ...
+[2025-08-11T09:23:34,595][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] closed
+[2025-08-11T09:26:19,138][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] version[9.1.1], pid[22212], build[zip/5e94055934defa56e454868b7783b2a3b683785e/2025-08-05T01:07:31.959947279Z], OS[Windows 11/10.0/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/24/24+36-3646]
+[2025-08-11T09:26:19,176][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] JVM home [C:\elasticsearch-9.1.1\jdk], using bundled JDK [true]
+[2025-08-11T09:26:19,177][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] JVM arguments [-Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, --add-opens=org.apache.lucene.core/org.apache.lucene.codecs.lucene99=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene90=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene91=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene92=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene94=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene95=org.elasticsearch.server, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=CLDR, -Dorg.apache.lucene.vectorization.upperJavaFeatureVersion=24, -Des.path.home=C:\elasticsearch-9.1.1, -Des.distribution.type=zip, -Des.java.type=bundled JDK, --enable-native-access=org.elasticsearch.nativeaccess,org.apache.lucene.core, --enable-native-access=ALL-UNNAMED, --illegal-native-access=deny, -XX:ReplayDataFile=logs/replay_pid%p.log, -Des.entitlements.enabled=true, -XX:+EnableDynamicAgentLoading, -Djdk.attach.allowAttachSelf=true, --patch-module=java.base=C:\elasticsearch-9.1.1\lib\entitlement-bridge\elasticsearch-entitlement-bridge-9.1.1.jar, --add-exports=java.base/org.elasticsearch.entitlement.bridge=org.elasticsearch.entitlement,java.logging,java.net.http,java.naming,jdk.net, -XX:+UseG1GC, -Djava.io.tmpdir=C:\Users\rahul\AppData\Local\Temp\elasticsearch, --add-modules=jdk.incubator.vector, -Dorg.apache.lucene.store.defaultReadAdvice=normal, -XX:+HeapDumpOnOutOfMemoryError, -XX:+ExitOnOutOfMemoryError, -XX:ErrorFile=hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=gc.log:utctime,level,pid,tags:filecount=32,filesize=64m, -Xms3770m, -Xmx3770m, -XX:MaxDirectMemorySize=1976565760, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, --module-path=C:\elasticsearch-9.1.1\lib, --add-modules=jdk.net, --add-modules=jdk.management.agent, --add-modules=ALL-MODULE-PATH, -Djdk.module.main=org.elasticsearch.server]
+[2025-08-11T09:26:19,178][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] Default Locale [en_US]
+[2025-08-11T09:26:19,506][INFO ][o.e.n.NativeAccess       ] [DESKTOP-I62NE16] Using [jdk] native provider and native methods for [Windows]
+[2025-08-11T09:26:19,797][INFO ][o.a.l.i.v.PanamaVectorizationProvider] [DESKTOP-I62NE16] Java vector incubator API enabled; uses preferredBitSize=256; FMA enabled
+[2025-08-11T09:26:20,046][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] Bootstrapping Entitlements
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-url]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rest-root]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-core]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-redact]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-user-agent]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-async-search]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-monitoring]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-s3]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-analytics]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-esql-core]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [search-business-rules]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ent-search]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-autoscaling]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [lang-painless]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ml]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [lang-mustache]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [legacy-geo]
+[2025-08-11T09:26:26,297][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [logsdb]
+[2025-08-11T09:26:26,306][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ql]
+[2025-08-11T09:26:26,306][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rank-rrf]
+[2025-08-11T09:26:26,306][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [analysis-common]
+[2025-08-11T09:26:26,308][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [health-shards-availability]
+[2025-08-11T09:26:26,308][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [transport-netty4]
+[2025-08-11T09:26:26,308][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [aggregations]
+[2025-08-11T09:26:26,308][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-common]
+[2025-08-11T09:26:26,308][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [frozen-indices]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-identity-provider]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-shutdown]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-text-structure]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [snapshot-repo-test-kit]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ml-package-loader]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [kibana]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [constant-keyword]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-logstash]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ccr]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-graph]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rank-vectors]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-esql]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [parent-join]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [counted-keyword]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-enrich]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repositories-metering-api]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [transform]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-azure]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [dot-prefix-validation]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-gcs]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [spatial]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-otel-data]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [apm]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [mapper-extras]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [mapper-version]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-rollup]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [percolator]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-migrate]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [data-streams]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-stack]
+[2025-08-11T09:26:26,310][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rank-eval]
+[2025-08-11T09:26:26,322][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [reindex]
+[2025-08-11T09:26:26,322][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [streams]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-security]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [blob-cache]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [searchable-snapshots]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-slm]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-geoip-enterprise-downloader]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [snapshot-based-recoveries]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-watcher]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [old-lucene-versions]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ilm]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-inference]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-voting-only-node]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-deprecation]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-fleet]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-aggregate-metric]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-downsample]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-profiling]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-geoip]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-write-load-forecaster]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-attachment]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [wildcard]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-apm-data]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [unsigned-long]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-sql]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [runtime-fields-common]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-async]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [vector-tile]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-kql]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [lang-expression]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-otel]
+[2025-08-11T09:26:26,324][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-eql]
+[2025-08-11T09:26:27,284][WARN ][stderr                   ] [DESKTOP-I62NE16] SLF4J: No SLF4J providers were found.
+[2025-08-11T09:26:27,284][WARN ][stderr                   ] [DESKTOP-I62NE16] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2025-08-11T09:26:27,284][WARN ][stderr                   ] [DESKTOP-I62NE16] SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2025-08-11T09:26:29,059][INFO ][o.e.e.NodeEnvironment    ] [DESKTOP-I62NE16] using [1] data paths, mounts [[Windows (C:)]], net usable_space [63.5gb], net total_space [236.9gb], types [NTFS]
+[2025-08-11T09:26:29,064][INFO ][o.e.e.NodeEnvironment    ] [DESKTOP-I62NE16] heap size [3.6gb], compressed ordinary object pointers [true]
+[2025-08-11T09:26:29,385][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] node name [DESKTOP-I62NE16], node ID [vWBMfjI9RTC03ouZKx7PkQ], cluster name [elasticsearch], roles [transform, data_content, data_warm, master, remote_cluster_client, data, data_cold, ingest, data_frozen, ml, data_hot]
+[2025-08-11T09:26:34,604][INFO ][o.e.f.FeatureService     ] [DESKTOP-I62NE16] Registered local node features [ES_V_8, ES_V_9, cluster.reroute.ignores_metric_param, cluster.stats.source_modes, data_stream.failure_store, linear_retriever_supported, lucene_10_1_upgrade, lucene_10_upgrade, security.queryable_built_in_roles, simulate.ignored.fields, snapshots.get.state_parameter]
+[2025-08-11T09:26:35,207][INFO ][o.e.i.r.RecoverySettings ] [DESKTOP-I62NE16] using rate limit [40mb] with [default=40mb, read=0b, write=0b, max=0b]
+[2025-08-11T09:26:35,574][INFO ][o.e.c.m.DataStreamGlobalRetentionSettings] [DESKTOP-I62NE16] Updated global default retention to [null]
+[2025-08-11T09:26:35,574][INFO ][o.e.c.m.DataStreamGlobalRetentionSettings] [DESKTOP-I62NE16] Updated global max retention to [null]
+[2025-08-11T09:26:35,574][INFO ][o.e.c.m.DataStreamGlobalRetentionSettings] [DESKTOP-I62NE16] Updated failures default retention to [30d]
+[2025-08-11T09:26:35,574][INFO ][o.e.c.m.DataStreamFailureStoreSettings] [DESKTOP-I62NE16] Updated data stream name patterns for enabling failure store to [[]]
+[2025-08-11T09:26:36,399][INFO ][o.e.x.m.p.l.CppLogMessageHandler] [DESKTOP-I62NE16] [controller/5448] [Main.cc@123] controller (64 bit): Version 9.1.1 (Build f7ccb1c45779fa) Copyright (c) 2025 Elasticsearch BV
+[2025-08-11T09:26:37,109][INFO ][o.e.x.o.OTelPlugin       ] [DESKTOP-I62NE16] OTel ingest plugin is enabled
+[2025-08-11T09:26:37,170][INFO ][o.e.x.c.t.YamlTemplateRegistry] [DESKTOP-I62NE16] OpenTelemetry index template registry is enabled
+[2025-08-11T09:26:37,178][INFO ][o.e.t.a.APM              ] [DESKTOP-I62NE16] Sending apm metrics is disabled
+[2025-08-11T09:26:37,178][INFO ][o.e.t.a.APM              ] [DESKTOP-I62NE16] Sending apm tracing is disabled
+[2025-08-11T09:26:37,252][INFO ][o.e.x.s.Security         ] [DESKTOP-I62NE16] Security is enabled
+[2025-08-11T09:26:37,782][INFO ][o.e.x.s.a.s.FileRolesStore] [DESKTOP-I62NE16] parsed [0] roles from file [C:\elasticsearch-9.1.1\config\roles.yml]
+[2025-08-11T09:26:38,535][INFO ][o.e.x.w.Watcher          ] [DESKTOP-I62NE16] Watcher initialized components at 2025-08-11T03:56:38.535Z
+[2025-08-11T09:26:38,740][INFO ][o.e.x.p.ProfilingPlugin  ] [DESKTOP-I62NE16] Profiling is enabled
+[2025-08-11T09:26:38,758][INFO ][o.e.x.p.ProfilingPlugin  ] [DESKTOP-I62NE16] profiling index templates will not be installed or reinstalled
+[2025-08-11T09:26:38,774][INFO ][o.e.x.a.APMPlugin        ] [DESKTOP-I62NE16] APM ingest plugin is enabled
+[2025-08-11T09:26:38,839][INFO ][o.e.x.c.t.YamlTemplateRegistry] [DESKTOP-I62NE16] apm index template registry is enabled
+[2025-08-11T09:26:39,766][INFO ][o.e.t.n.NettyAllocator   ] [DESKTOP-I62NE16] creating NettyAllocator with the following configs: [name=elasticsearch_configured, chunk_size=1mb, suggested_max_allocation_size=1mb, factors={es.unsafe.use_netty_default_chunk_and_page_size=false, g1gc_enabled=true, g1gc_region_size=4mb}]
+[2025-08-11T09:26:39,855][INFO ][o.e.d.DiscoveryModule    ] [DESKTOP-I62NE16] using discovery type [multi-node] and seed hosts providers [settings]
+[2025-08-11T09:26:42,242][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] initialized
+[2025-08-11T09:26:42,243][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] starting ...
+[2025-08-11T09:26:49,169][INFO ][o.e.r.s.S3RepositoryPlugin] [DESKTOP-I62NE16] failed to obtain region from default provider chain
+software.amazon.awssdk.core.exception.SdkClientException: Unable to load region from any of the providers in the chain software.amazon.awssdk.regions.providers.DefaultAwsRegionProviderChain@6ce9cc4f: [software.amazon.awssdk.regions.providers.SystemSettingsRegionProvider@26abbeef: Unable to load region from system settings. Region must be specified either via environment variable (AWS_REGION) or  system property (aws.region)., software.amazon.awssdk.regions.providers.AwsProfileRegionProvider@5d97e0cd: No region provided in profile: default, software.amazon.awssdk.regions.providers.InstanceProfileRegionProvider@247c4a32: Unable to contact EC2 metadata service.]
+	at software.amazon.awssdk.core.exception.SdkClientException$BuilderImpl.build(SdkClientException.java:130) ~[?:?]
+	at software.amazon.awssdk.regions.providers.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:70) ~[?:?]
+	at org.elasticsearch.repositories.s3.S3RepositoryPlugin.getDefaultRegion(S3RepositoryPlugin.java:102) ~[?:?]
+	at org.elasticsearch.repositories.s3.S3Service.lambda$new$0(S3Service.java:132) ~[?:?]
+	at org.elasticsearch.common.util.concurrent.RunOnce.run(RunOnce.java:41) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.repositories.s3.S3Service.doStart(S3Service.java:418) ~[?:?]
+	at org.elasticsearch.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:51) ~[elasticsearch-9.1.1.jar:?]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at org.elasticsearch.node.Node.start(Node.java:278) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.start(Elasticsearch.java:620) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.initPhase3(Elasticsearch.java:420) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:100) ~[elasticsearch-9.1.1.jar:?]
+[2025-08-11T09:26:49,200][INFO ][o.e.x.s.c.f.PersistentCache] [DESKTOP-I62NE16] persistent cache index loaded
+[2025-08-11T09:26:49,214][INFO ][o.e.x.d.l.DeprecationIndexingComponent] [DESKTOP-I62NE16] deprecation component started
+[2025-08-11T09:26:49,370][INFO ][o.e.t.TransportService   ] [DESKTOP-I62NE16] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2025-08-11T09:26:50,008][WARN ][o.e.c.c.ClusterBootstrapService] [DESKTOP-I62NE16] this node is locked into cluster UUID [4wyQ9oGlS4-SKHtAHAxnog] but [cluster.initial_master_nodes] is set to [DESKTOP-I62NE16]; remove this setting to avoid possible data loss caused by subsequent cluster bootstrap attempts; for further information see https://www.elastic.co/docs/deploy-manage/deploy/self-managed/important-settings-configuration?version=9.1#initial_master_nodes
+[2025-08-11T09:26:50,172][INFO ][o.e.c.s.MasterService    ] [DESKTOP-I62NE16] elected-as-master ([1] nodes joined in term 2)[_FINISH_ELECTION_, {DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{2SWuiMUyRSi-KdXJZBlV9g}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000} completing election], term: 2, version: 35, delta: master node changed {previous [], current [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{2SWuiMUyRSi-KdXJZBlV9g}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}]}
+[2025-08-11T09:26:50,372][INFO ][o.e.c.s.ClusterApplierService] [DESKTOP-I62NE16] master node changed {previous [], current [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{2SWuiMUyRSi-KdXJZBlV9g}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}]}, term: 2, version: 35, reason: Publication{term=2, version=35}
+[2025-08-11T09:26:50,447][INFO ][o.e.c.c.NodeJoinExecutor ] [DESKTOP-I62NE16] node-join: [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{2SWuiMUyRSi-KdXJZBlV9g}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}] with reason [completing election]
+[2025-08-11T09:26:50,463][INFO ][o.e.h.AbstractHttpServerTransport] [DESKTOP-I62NE16] publish_address {192.168.232.171:9200}, bound_addresses {[::]:9200}
+[2025-08-11T09:26:50,476][INFO ][o.e.x.w.LicensedWriteLoadForecaster] [DESKTOP-I62NE16] license state changed, now [valid]
+[2025-08-11T09:26:50,479][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] started {DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{2SWuiMUyRSi-KdXJZBlV9g}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}{ml.config_version=12.0.0, xpack.installed=true, transform.config_version=10.0.0, ml.machine_memory=7907368960, ml.allocated_processors=12, ml.allocated_processors_double=12.0, ml.max_jvm_size=3955228672}
+[2025-08-11T09:26:50,526][WARN ][o.e.x.i.s.e.a.ElasticInferenceServiceAuthorizationHandler] [DESKTOP-I62NE16] Failed to revoke access to default inference endpoint IDs: [rainbow-sprinkles, rerank-v1, multilingual-embed-v1, elser-v2], error: org.elasticsearch.cluster.block.ClusterBlockException: blocked by: [SERVICE_UNAVAILABLE/1/state not recovered / initialized];
+[2025-08-11T09:26:51,036][INFO ][o.e.x.m.MlIndexRollover  ] [DESKTOP-I62NE16] ML legacy indices rolled over
+[2025-08-11T09:26:51,036][INFO ][o.e.x.m.MlAnomaliesIndexUpdate] [DESKTOP-I62NE16] legacy ml anomalies indices rolled over and aliases updated
+[2025-08-11T09:26:51,048][INFO ][o.e.x.s.a.Realms         ] [DESKTOP-I62NE16] license mode is [basic], currently licensed security realms are [reserved/reserved,file/default_file,native/default_native]
+[2025-08-11T09:26:51,064][INFO ][o.e.l.ClusterStateLicenseService] [DESKTOP-I62NE16] license [dd8f2a23-dcdd-4ab0-9b29-d718613c55e1] mode [basic] - valid
+[2025-08-11T09:26:51,064][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] starting file watcher ...
+[2025-08-11T09:26:51,080][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] file settings service up and running [tid=97]
+[2025-08-11T09:26:51,083][INFO ][o.e.r.s.FileSettingsService] [DESKTOP-I62NE16] setting file [C:\elasticsearch-9.1.1\config\operator\settings.json] not found, initializing [file_settings] as empty
+[2025-08-11T09:26:51,105][INFO ][o.e.g.GatewayService     ] [DESKTOP-I62NE16] recovered [3] indices into cluster_state
+[2025-08-11T09:26:51,121][INFO ][o.e.x.w.LicensedWriteLoadForecaster] [DESKTOP-I62NE16] license state changed, now [not valid]
+[2025-08-11T09:26:51,794][INFO ][o.e.h.n.s.HealthNodeTaskExecutor] [DESKTOP-I62NE16] Node [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}] is selected as the current health node.
+[2025-08-11T09:26:51,794][INFO ][o.e.c.r.a.AllocationService] [DESKTOP-I62NE16] current.health="GREEN" message="Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[.ds-ilm-history-7-2025.08.11-000001][0], [.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001][0], [.security-7][0]]])." previous.health="RED" reason="shards started [[.ds-ilm-history-7-2025.08.11-000001][0], [.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001][0], [.security-7][0]]"
+[2025-08-11T09:27:27,263][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] stopping ...
+[2025-08-11T09:27:27,263][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] shutting down watcher thread
+[2025-08-11T09:27:27,263][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] watcher service stopped
+[2025-08-11T09:27:27,263][INFO ][o.e.x.w.WatcherService   ] [DESKTOP-I62NE16] stopping watch service, reason [shutdown initiated]
+[2025-08-11T09:27:27,263][INFO ][o.e.x.m.p.l.CppLogMessageHandler] [DESKTOP-I62NE16] [controller/5448] [Main.cc@176] ML controller exiting
+[2025-08-11T09:27:27,263][INFO ][o.e.x.w.t.s.e.TickerScheduleTriggerEngine] [DESKTOP-I62NE16] Stopping watcher engine
+[2025-08-11T09:27:27,263][INFO ][o.e.x.w.WatcherLifeCycleService] [DESKTOP-I62NE16] watcher has stopped and shutdown
+[2025-08-11T09:27:27,279][INFO ][o.e.x.m.p.NativeController] [DESKTOP-I62NE16] Native controller process has stopped - no new native processes can be started
+[2025-08-11T09:27:27,693][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] stopped
+[2025-08-11T09:27:27,709][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] closing ...
+[2025-08-11T09:27:27,727][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] closed
+[2025-08-11T09:30:17,665][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] version[9.1.1], pid[23924], build[zip/5e94055934defa56e454868b7783b2a3b683785e/2025-08-05T01:07:31.959947279Z], OS[Windows 11/10.0/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/24/24+36-3646]
+[2025-08-11T09:30:17,688][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] JVM home [C:\elasticsearch-9.1.1\jdk], using bundled JDK [true]
+[2025-08-11T09:30:17,689][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] JVM arguments [-Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, --add-opens=org.apache.lucene.core/org.apache.lucene.codecs.lucene99=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene90=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene91=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene92=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene94=org.elasticsearch.server, --add-opens=org.apache.lucene.backward_codecs/org.apache.lucene.backward_codecs.lucene95=org.elasticsearch.server, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=CLDR, -Dorg.apache.lucene.vectorization.upperJavaFeatureVersion=24, -Des.path.home=C:\elasticsearch-9.1.1, -Des.distribution.type=zip, -Des.java.type=bundled JDK, --enable-native-access=org.elasticsearch.nativeaccess,org.apache.lucene.core, --enable-native-access=ALL-UNNAMED, --illegal-native-access=deny, -XX:ReplayDataFile=logs/replay_pid%p.log, -Des.entitlements.enabled=true, -XX:+EnableDynamicAgentLoading, -Djdk.attach.allowAttachSelf=true, --patch-module=java.base=C:\elasticsearch-9.1.1\lib\entitlement-bridge\elasticsearch-entitlement-bridge-9.1.1.jar, --add-exports=java.base/org.elasticsearch.entitlement.bridge=org.elasticsearch.entitlement,java.logging,java.net.http,java.naming,jdk.net, -XX:+UseG1GC, -Djava.io.tmpdir=C:\Users\rahul\AppData\Local\Temp\elasticsearch, --add-modules=jdk.incubator.vector, -Dorg.apache.lucene.store.defaultReadAdvice=normal, -XX:+HeapDumpOnOutOfMemoryError, -XX:+ExitOnOutOfMemoryError, -XX:ErrorFile=hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=gc.log:utctime,level,pid,tags:filecount=32,filesize=64m, -Xms3770m, -Xmx3770m, -XX:MaxDirectMemorySize=1976565760, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, --module-path=C:\elasticsearch-9.1.1\lib, --add-modules=jdk.net, --add-modules=jdk.management.agent, --add-modules=ALL-MODULE-PATH, -Djdk.module.main=org.elasticsearch.server]
+[2025-08-11T09:30:17,691][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] Default Locale [en_US]
+[2025-08-11T09:30:17,998][INFO ][o.e.n.NativeAccess       ] [DESKTOP-I62NE16] Using [jdk] native provider and native methods for [Windows]
+[2025-08-11T09:30:18,241][INFO ][o.a.l.i.v.PanamaVectorizationProvider] [DESKTOP-I62NE16] Java vector incubator API enabled; uses preferredBitSize=256; FMA enabled
+[2025-08-11T09:30:18,499][INFO ][o.e.b.Elasticsearch      ] [DESKTOP-I62NE16] Bootstrapping Entitlements
+[2025-08-11T09:30:23,723][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-url]
+[2025-08-11T09:30:23,724][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rest-root]
+[2025-08-11T09:30:23,724][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-core]
+[2025-08-11T09:30:23,724][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-redact]
+[2025-08-11T09:30:23,725][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-user-agent]
+[2025-08-11T09:30:23,725][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-async-search]
+[2025-08-11T09:30:23,726][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-monitoring]
+[2025-08-11T09:30:23,726][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-s3]
+[2025-08-11T09:30:23,727][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-analytics]
+[2025-08-11T09:30:23,727][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-esql-core]
+[2025-08-11T09:30:23,728][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [search-business-rules]
+[2025-08-11T09:30:23,728][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ent-search]
+[2025-08-11T09:30:23,728][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-autoscaling]
+[2025-08-11T09:30:23,729][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [lang-painless]
+[2025-08-11T09:30:23,729][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ml]
+[2025-08-11T09:30:23,730][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [lang-mustache]
+[2025-08-11T09:30:23,730][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [legacy-geo]
+[2025-08-11T09:30:23,731][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [logsdb]
+[2025-08-11T09:30:23,731][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ql]
+[2025-08-11T09:30:23,732][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rank-rrf]
+[2025-08-11T09:30:23,732][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [analysis-common]
+[2025-08-11T09:30:23,732][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [health-shards-availability]
+[2025-08-11T09:30:23,733][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [transport-netty4]
+[2025-08-11T09:30:23,733][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [aggregations]
+[2025-08-11T09:30:23,733][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-common]
+[2025-08-11T09:30:23,734][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [frozen-indices]
+[2025-08-11T09:30:23,734][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-identity-provider]
+[2025-08-11T09:30:23,734][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-shutdown]
+[2025-08-11T09:30:23,734][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-text-structure]
+[2025-08-11T09:30:23,735][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [snapshot-repo-test-kit]
+[2025-08-11T09:30:23,735][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ml-package-loader]
+[2025-08-11T09:30:23,735][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [kibana]
+[2025-08-11T09:30:23,736][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [constant-keyword]
+[2025-08-11T09:30:23,736][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-logstash]
+[2025-08-11T09:30:23,736][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ccr]
+[2025-08-11T09:30:23,736][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-graph]
+[2025-08-11T09:30:23,737][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rank-vectors]
+[2025-08-11T09:30:23,737][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-esql]
+[2025-08-11T09:30:23,737][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [parent-join]
+[2025-08-11T09:30:23,737][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [counted-keyword]
+[2025-08-11T09:30:23,737][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-enrich]
+[2025-08-11T09:30:23,738][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repositories-metering-api]
+[2025-08-11T09:30:23,738][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [transform]
+[2025-08-11T09:30:23,738][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-azure]
+[2025-08-11T09:30:23,738][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [dot-prefix-validation]
+[2025-08-11T09:30:23,739][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [repository-gcs]
+[2025-08-11T09:30:23,739][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [spatial]
+[2025-08-11T09:30:23,739][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-otel-data]
+[2025-08-11T09:30:23,740][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [apm]
+[2025-08-11T09:30:23,740][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [mapper-extras]
+[2025-08-11T09:30:23,740][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [mapper-version]
+[2025-08-11T09:30:23,741][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-rollup]
+[2025-08-11T09:30:23,741][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [percolator]
+[2025-08-11T09:30:23,742][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-migrate]
+[2025-08-11T09:30:23,742][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [data-streams]
+[2025-08-11T09:30:23,743][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-stack]
+[2025-08-11T09:30:23,743][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [rank-eval]
+[2025-08-11T09:30:23,744][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [reindex]
+[2025-08-11T09:30:23,744][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [streams]
+[2025-08-11T09:30:23,745][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-security]
+[2025-08-11T09:30:23,746][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [blob-cache]
+[2025-08-11T09:30:23,746][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [searchable-snapshots]
+[2025-08-11T09:30:23,746][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-slm]
+[2025-08-11T09:30:23,746][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-geoip-enterprise-downloader]
+[2025-08-11T09:30:23,746][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [snapshot-based-recoveries]
+[2025-08-11T09:30:23,747][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-watcher]
+[2025-08-11T09:30:23,747][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [old-lucene-versions]
+[2025-08-11T09:30:23,747][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-ilm]
+[2025-08-11T09:30:23,747][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-inference]
+[2025-08-11T09:30:23,747][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-voting-only-node]
+[2025-08-11T09:30:23,748][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-deprecation]
+[2025-08-11T09:30:23,748][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-fleet]
+[2025-08-11T09:30:23,749][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-aggregate-metric]
+[2025-08-11T09:30:23,749][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-downsample]
+[2025-08-11T09:30:23,749][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-profiling]
+[2025-08-11T09:30:23,749][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-geoip]
+[2025-08-11T09:30:23,750][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-write-load-forecaster]
+[2025-08-11T09:30:23,750][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-attachment]
+[2025-08-11T09:30:23,750][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [wildcard]
+[2025-08-11T09:30:23,751][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-apm-data]
+[2025-08-11T09:30:23,751][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [unsigned-long]
+[2025-08-11T09:30:23,751][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-sql]
+[2025-08-11T09:30:23,752][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [runtime-fields-common]
+[2025-08-11T09:30:23,752][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-async]
+[2025-08-11T09:30:23,752][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [vector-tile]
+[2025-08-11T09:30:23,752][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-kql]
+[2025-08-11T09:30:23,753][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [lang-expression]
+[2025-08-11T09:30:23,753][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [ingest-otel]
+[2025-08-11T09:30:23,753][INFO ][o.e.p.PluginsService     ] [DESKTOP-I62NE16] loaded module [x-pack-eql]
+[2025-08-11T09:30:24,683][WARN ][stderr                   ] [DESKTOP-I62NE16] SLF4J: No SLF4J providers were found.
+[2025-08-11T09:30:24,684][WARN ][stderr                   ] [DESKTOP-I62NE16] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2025-08-11T09:30:24,684][WARN ][stderr                   ] [DESKTOP-I62NE16] SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2025-08-11T09:30:26,163][INFO ][o.e.e.NodeEnvironment    ] [DESKTOP-I62NE16] using [1] data paths, mounts [[Windows (C:)]], net usable_space [63.9gb], net total_space [236.9gb], types [NTFS]
+[2025-08-11T09:30:26,163][INFO ][o.e.e.NodeEnvironment    ] [DESKTOP-I62NE16] heap size [3.6gb], compressed ordinary object pointers [true]
+[2025-08-11T09:30:26,353][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] node name [DESKTOP-I62NE16], node ID [vWBMfjI9RTC03ouZKx7PkQ], cluster name [elasticsearch], roles [data_content, data_warm, master, remote_cluster_client, data, data_cold, ingest, data_frozen, ml, data_hot, transform]
+[2025-08-11T09:30:31,280][INFO ][o.e.f.FeatureService     ] [DESKTOP-I62NE16] Registered local node features [ES_V_8, ES_V_9, cluster.reroute.ignores_metric_param, cluster.stats.source_modes, data_stream.failure_store, linear_retriever_supported, lucene_10_1_upgrade, lucene_10_upgrade, security.queryable_built_in_roles, simulate.ignored.fields, snapshots.get.state_parameter]
+[2025-08-11T09:30:31,653][INFO ][o.e.i.r.RecoverySettings ] [DESKTOP-I62NE16] using rate limit [40mb] with [default=40mb, read=0b, write=0b, max=0b]
+[2025-08-11T09:30:32,040][INFO ][o.e.c.m.DataStreamGlobalRetentionSettings] [DESKTOP-I62NE16] Updated global default retention to [null]
+[2025-08-11T09:30:32,041][INFO ][o.e.c.m.DataStreamGlobalRetentionSettings] [DESKTOP-I62NE16] Updated global max retention to [null]
+[2025-08-11T09:30:32,043][INFO ][o.e.c.m.DataStreamGlobalRetentionSettings] [DESKTOP-I62NE16] Updated failures default retention to [30d]
+[2025-08-11T09:30:32,045][INFO ][o.e.c.m.DataStreamFailureStoreSettings] [DESKTOP-I62NE16] Updated data stream name patterns for enabling failure store to [[]]
+[2025-08-11T09:30:32,891][INFO ][o.e.x.m.p.l.CppLogMessageHandler] [DESKTOP-I62NE16] [controller/20400] [Main.cc@123] controller (64 bit): Version 9.1.1 (Build f7ccb1c45779fa) Copyright (c) 2025 Elasticsearch BV
+[2025-08-11T09:30:33,484][INFO ][o.e.x.o.OTelPlugin       ] [DESKTOP-I62NE16] OTel ingest plugin is enabled
+[2025-08-11T09:30:33,528][INFO ][o.e.x.c.t.YamlTemplateRegistry] [DESKTOP-I62NE16] OpenTelemetry index template registry is enabled
+[2025-08-11T09:30:33,535][INFO ][o.e.t.a.APM              ] [DESKTOP-I62NE16] Sending apm metrics is disabled
+[2025-08-11T09:30:33,535][INFO ][o.e.t.a.APM              ] [DESKTOP-I62NE16] Sending apm tracing is disabled
+[2025-08-11T09:30:33,598][INFO ][o.e.x.s.Security         ] [DESKTOP-I62NE16] Security is disabled
+[2025-08-11T09:30:34,105][INFO ][o.e.x.w.Watcher          ] [DESKTOP-I62NE16] Watcher initialized components at 2025-08-11T04:00:34.104Z
+[2025-08-11T09:30:34,333][INFO ][o.e.x.p.ProfilingPlugin  ] [DESKTOP-I62NE16] Profiling is enabled
+[2025-08-11T09:30:34,362][INFO ][o.e.x.p.ProfilingPlugin  ] [DESKTOP-I62NE16] profiling index templates will not be installed or reinstalled
+[2025-08-11T09:30:34,374][INFO ][o.e.x.a.APMPlugin        ] [DESKTOP-I62NE16] APM ingest plugin is enabled
+[2025-08-11T09:30:34,438][INFO ][o.e.x.c.t.YamlTemplateRegistry] [DESKTOP-I62NE16] apm index template registry is enabled
+[2025-08-11T09:30:35,329][INFO ][o.e.t.n.NettyAllocator   ] [DESKTOP-I62NE16] creating NettyAllocator with the following configs: [name=elasticsearch_configured, chunk_size=1mb, suggested_max_allocation_size=1mb, factors={es.unsafe.use_netty_default_chunk_and_page_size=false, g1gc_enabled=true, g1gc_region_size=4mb}]
+[2025-08-11T09:30:35,420][INFO ][o.e.d.DiscoveryModule    ] [DESKTOP-I62NE16] using discovery type [multi-node] and seed hosts providers [settings]
+[2025-08-11T09:30:37,605][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] initialized
+[2025-08-11T09:30:37,607][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] starting ...
+[2025-08-11T09:30:44,478][INFO ][o.e.r.s.S3RepositoryPlugin] [DESKTOP-I62NE16] failed to obtain region from default provider chain
+software.amazon.awssdk.core.exception.SdkClientException: Unable to load region from any of the providers in the chain software.amazon.awssdk.regions.providers.DefaultAwsRegionProviderChain@120a40f1: [software.amazon.awssdk.regions.providers.SystemSettingsRegionProvider@232cf070: Unable to load region from system settings. Region must be specified either via environment variable (AWS_REGION) or  system property (aws.region)., software.amazon.awssdk.regions.providers.AwsProfileRegionProvider@1848ec86: No region provided in profile: default, software.amazon.awssdk.regions.providers.InstanceProfileRegionProvider@14e486d7: Unable to contact EC2 metadata service.]
+	at software.amazon.awssdk.core.exception.SdkClientException$BuilderImpl.build(SdkClientException.java:130) ~[?:?]
+	at software.amazon.awssdk.regions.providers.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:70) ~[?:?]
+	at org.elasticsearch.repositories.s3.S3RepositoryPlugin.getDefaultRegion(S3RepositoryPlugin.java:102) ~[?:?]
+	at org.elasticsearch.repositories.s3.S3Service.lambda$new$0(S3Service.java:132) ~[?:?]
+	at org.elasticsearch.common.util.concurrent.RunOnce.run(RunOnce.java:41) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.repositories.s3.S3Service.doStart(S3Service.java:418) ~[?:?]
+	at org.elasticsearch.common.component.AbstractLifecycleComponent.start(AbstractLifecycleComponent.java:51) ~[elasticsearch-9.1.1.jar:?]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at org.elasticsearch.node.Node.start(Node.java:278) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.start(Elasticsearch.java:620) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.initPhase3(Elasticsearch.java:420) ~[elasticsearch-9.1.1.jar:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:100) ~[elasticsearch-9.1.1.jar:?]
+[2025-08-11T09:30:44,521][INFO ][o.e.x.s.c.f.PersistentCache] [DESKTOP-I62NE16] persistent cache index loaded
+[2025-08-11T09:30:44,522][INFO ][o.e.x.d.l.DeprecationIndexingComponent] [DESKTOP-I62NE16] deprecation component started
+[2025-08-11T09:30:44,690][INFO ][o.e.t.TransportService   ] [DESKTOP-I62NE16] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2025-08-11T09:30:45,308][WARN ][o.e.c.c.ClusterBootstrapService] [DESKTOP-I62NE16] this node is locked into cluster UUID [4wyQ9oGlS4-SKHtAHAxnog] but [cluster.initial_master_nodes] is set to [DESKTOP-I62NE16]; remove this setting to avoid possible data loss caused by subsequent cluster bootstrap attempts; for further information see https://www.elastic.co/docs/deploy-manage/deploy/self-managed/important-settings-configuration?version=9.1#initial_master_nodes
+[2025-08-11T09:30:45,468][INFO ][o.e.c.s.MasterService    ] [DESKTOP-I62NE16] elected-as-master ([1] nodes joined in term 3)[_FINISH_ELECTION_, {DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{l2FmGMnjT3KLNALDW-RENg}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000} completing election], term: 3, version: 44, delta: master node changed {previous [], current [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{l2FmGMnjT3KLNALDW-RENg}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}]}
+[2025-08-11T09:30:45,654][INFO ][o.e.c.s.ClusterApplierService] [DESKTOP-I62NE16] master node changed {previous [], current [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{l2FmGMnjT3KLNALDW-RENg}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}]}, term: 3, version: 44, reason: Publication{term=3, version=44}
+[2025-08-11T09:30:45,705][INFO ][o.e.c.c.NodeJoinExecutor ] [DESKTOP-I62NE16] node-join: [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{l2FmGMnjT3KLNALDW-RENg}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}] with reason [completing election]
+[2025-08-11T09:30:45,713][INFO ][o.e.h.AbstractHttpServerTransport] [DESKTOP-I62NE16] publish_address {192.168.232.171:9200}, bound_addresses {[::]:9200}
+[2025-08-11T09:30:45,719][INFO ][o.e.x.w.LicensedWriteLoadForecaster] [DESKTOP-I62NE16] license state changed, now [valid]
+[2025-08-11T09:30:45,733][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] started {DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}{l2FmGMnjT3KLNALDW-RENg}{DESKTOP-I62NE16}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}{9.1.1}{8000099-9033000}{ml.config_version=12.0.0, xpack.installed=true, transform.config_version=10.0.0, ml.machine_memory=7907368960, ml.allocated_processors=12, ml.allocated_processors_double=12.0, ml.max_jvm_size=3955228672}
+[2025-08-11T09:30:45,768][WARN ][o.e.x.i.s.e.a.ElasticInferenceServiceAuthorizationHandler] [DESKTOP-I62NE16] Failed to revoke access to default inference endpoint IDs: [rainbow-sprinkles, rerank-v1, multilingual-embed-v1, elser-v2], error: org.elasticsearch.cluster.block.ClusterBlockException: blocked by: [SERVICE_UNAVAILABLE/1/state not recovered / initialized];
+[2025-08-11T09:30:46,247][INFO ][o.e.x.m.MlIndexRollover  ] [DESKTOP-I62NE16] ML legacy indices rolled over
+[2025-08-11T09:30:46,247][INFO ][o.e.x.m.MlAnomaliesIndexUpdate] [DESKTOP-I62NE16] legacy ml anomalies indices rolled over and aliases updated
+[2025-08-11T09:30:46,465][INFO ][o.e.l.ClusterStateLicenseService] [DESKTOP-I62NE16] license [dd8f2a23-dcdd-4ab0-9b29-d718613c55e1] mode [basic] - valid
+[2025-08-11T09:30:46,469][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] starting file watcher ...
+[2025-08-11T09:30:46,479][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] file settings service up and running [tid=95]
+[2025-08-11T09:30:46,481][INFO ][o.e.r.s.FileSettingsService] [DESKTOP-I62NE16] setting file [C:\elasticsearch-9.1.1\config\operator\settings.json] not found, initializing [file_settings] as empty
+[2025-08-11T09:30:46,491][INFO ][o.e.g.GatewayService     ] [DESKTOP-I62NE16] recovered [3] indices into cluster_state
+[2025-08-11T09:30:46,511][INFO ][o.e.x.w.LicensedWriteLoadForecaster] [DESKTOP-I62NE16] license state changed, now [not valid]
+[2025-08-11T09:30:47,173][INFO ][o.e.h.n.s.HealthNodeTaskExecutor] [DESKTOP-I62NE16] Node [{DESKTOP-I62NE16}{vWBMfjI9RTC03ouZKx7PkQ}] is selected as the current health node.
+[2025-08-11T09:30:47,179][INFO ][o.e.c.r.a.AllocationService] [DESKTOP-I62NE16] current.health="GREEN" message="Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001][0], [.ds-ilm-history-7-2025.08.11-000001][0], [.security-7][0]]])." previous.health="RED" reason="shards started [[.ds-.logs-elasticsearch.deprecation-default-2025.08.11-000001][0], [.ds-ilm-history-7-2025.08.11-000001][0], [.security-7][0]]"
+[2025-08-11T10:33:54,348][INFO ][o.e.c.m.MetadataCreateIndexService] [DESKTOP-I62NE16] creating index [products] in project [default], cause [api], templates [], shards [1]/[1]
+[2025-08-11T10:33:54,477][INFO ][o.e.c.r.a.a.DesiredBalanceComputer] [DESKTOP-I62NE16] Desired balance computation for [3] is still not converged after [1h] and [1] iterations
+[2025-08-11T10:36:37,412][INFO ][o.e.c.m.MetadataMappingService] [DESKTOP-I62NE16] [products/3EwdqPXIT_-0hUDfIcxJLQ] update_mapping [_doc]
+[2025-08-11T13:41:49,343][WARN ][o.e.t.ThreadPool         ] [DESKTOP-I62NE16] execution of [org.elasticsearch.cluster.InternalClusterInfoService$RefreshScheduler$$Lambda/0x0000000011332750@154f19c1] took [7446214ms] which is above the warn threshold of [5000ms]
+[2025-08-11T13:41:49,337][WARN ][o.e.t.ThreadPool         ] [DESKTOP-I62NE16] timer thread slept for [2h/7446202ms] on absolute clock which is above the warn threshold of [5000ms]
+[2025-08-11T13:41:49,387][WARN ][o.e.t.ThreadPool         ] [DESKTOP-I62NE16] timer thread slept for [2h/7446214475800ns] on relative clock which is above the warn threshold of [5000ms]
+[2025-08-11T15:23:35,142][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] stopping ...
+[2025-08-11T15:23:35,173][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] shutting down watcher thread
+[2025-08-11T15:23:35,189][INFO ][o.e.c.f.AbstractFileWatchingService] [DESKTOP-I62NE16] watcher service stopped
+[2025-08-11T15:23:35,257][INFO ][o.e.x.w.WatcherService   ] [DESKTOP-I62NE16] stopping watch service, reason [shutdown initiated]
+[2025-08-11T15:23:35,263][INFO ][o.e.x.w.t.s.e.TickerScheduleTriggerEngine] [DESKTOP-I62NE16] Stopping watcher engine
+[2025-08-11T15:23:35,263][INFO ][o.e.x.w.WatcherLifeCycleService] [DESKTOP-I62NE16] watcher has stopped and shutdown
+[2025-08-11T15:23:35,263][INFO ][o.e.x.m.p.l.CppLogMessageHandler] [DESKTOP-I62NE16] [controller/20400] [Main.cc@176] ML controller exiting
+[2025-08-11T15:23:35,263][INFO ][o.e.x.m.p.NativeController] [DESKTOP-I62NE16] Native controller process has stopped - no new native processes can be started
+[2025-08-11T15:23:36,330][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] stopped
+[2025-08-11T15:23:36,332][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] closing ...
+[2025-08-11T15:23:36,729][INFO ][o.e.n.Node               ] [DESKTOP-I62NE16] closed
