@@ -1,0 +1,149 @@
+# ===================== Exact Value Filters =====================
+
+# term — exact match for a single value
+GET products/_search
+{
+  "query": {
+    "term": { "name.keyword": "Iphone 12" }
+  }
+}
+
+# terms — match multiple exact values
+GET products/_search
+{
+  "query": {
+    "terms": { "name.keyword": ["Iphone 12", "Apple MacBook Air"] }
+  }
+}
+
+# exists — field must exist
+GET products/_search
+{
+  "query": {
+    "exists": { "field": "price" }
+  }
+}
+
+# prefix — starts with given text
+GET products/_search
+{
+  "query": {
+    "prefix": { "name.keyword": "Samsung" }
+  }
+}
+
+# ids — match specific document IDs
+GET products/_search
+{
+  "query": {
+    "ids": { "values": ["1", "3", "9"] }
+  }
+}
+
+# ===================== Text & Pattern Filters =====================
+
+# match — full-text search (analyzed)
+GET products/_search
+{
+  "query": {
+    "match": { "description": "Black" }
+  }
+}
+
+# match_phrase — exact phrase match
+GET products/_search
+{
+  "query": {
+    "match_phrase": { "description": "Mystic Black" }
+  }
+}
+
+# match_phrase_prefix — phrase starting with given words
+GET products/_search
+{
+  "query": {
+    "match_phrase_prefix": { "description": "Fitness Tr" }
+  }
+}
+
+# wildcard — match using * and ?
+GET products/_search
+{
+  "query": {
+    "wildcard": { "description.keyword": "*Black" }
+  }
+}
+
+# regexp — regex match
+GET products/_search
+{
+  "query": {
+    "regexp": { "description.keyword": ".*Black" }
+  }
+}
+
+# fuzzy — match with typo tolerance
+GET products/_search
+{
+  "query": {
+    "fuzzy": { "name": { "value": "iphon", "fuzziness": 2 } }
+  }
+}
+
+# ===================== Range & Comparison Filters =====================
+
+# range — filter by numeric range
+GET products/_search
+{
+  "query": {
+    "range": { "price": { "gte": 500, "lte": 800 } }
+  }
+}
+
+# range — filter by quantity greater than
+GET products/_search
+{
+  "query": {
+    "range": { "quantity": { "gt": 10 } }
+  }
+}
+
+# ===================== Logical Filters =====================
+
+# bool — combine multiple filters
+GET products/_search
+{
+  "query": {
+    "bool": {
+      "filter": [
+        { "range": { "price": { "lt": 800 } } },
+        { "match": { "description": "Black" } }
+      ]
+    }
+  }
+}
+
+# constant_score — filter ignoring scoring
+GET products/_search
+{
+  "query": {
+    "constant_score": {
+      "filter": { "term": { "name.keyword": "Iphone 12" } }
+    }
+  }
+}
+
+# ===================== Special Filters =====================
+
+# script — custom filtering with Painless script
+GET products/_search
+{
+  "query": {
+    "script": {
+      "script": {
+        "source": "doc['price'].value > params.min",
+        "params": { "min": 700 }
+      }
+    }
+  }
+}

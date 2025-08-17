@@ -1,0 +1,1 @@
+- elastic search is used as db as well as search engine
