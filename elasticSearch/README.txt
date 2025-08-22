@@ -1,1 +1,3 @@
 - elastic search is used as db as well as search engine
+- to start lastic search server, go to bin folder and run elasticsearch.bat
+- index is available at http://localhost:9200
